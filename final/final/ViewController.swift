@@ -21,15 +21,15 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
 
         print("come baby")
     }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         if userDefault.bool(forKey: "usersignedin"){
             performSegue(withIdentifier: "signed", sender: self)
         }
     }
     
-    func signInUser(){
-        
-    }
+    
 
 
 }
