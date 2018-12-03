@@ -9,4 +9,6 @@ target 'final' do
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'GoogleSignIn'
+Pod 'GoogleMaps'
+Pod 'GooglePlaces'
 end
