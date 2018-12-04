@@ -12,7 +12,7 @@ import GoogleSignIn
 
 class SignedViewController: BaseViewController {
     
-    let gameInfo: [[String]] = [["Aov","Arena of Valor International Championship 2018","The Arena of Valor International Championship 2018 (AIC 2018) is the second Arena of Valor international tournament in 2018. This is a 4-week competition with the greatest teams from across the globe competing for a prize pool of $600,000 beginning November 23rd, 2018."]
+    let gameInfo: [[String]] = [["Arena of Valor","Arena of Valor International Championship 2018","The Arena of Valor International Championship 2018 (AIC 2018) is the second Arena of Valor international tournament in 2018. This is a 4-week competition with the greatest teams from across the globe competing for a prize pool of $600,000 beginning November 23rd, 2018."]
         ,["PUBG","Get Ready for the 2019 Season of PUBG Esports","PUBG esports is about to get serious. Starting next year, we’re introducing official pro competitions in nine different regions around the globe. We’ll also be hosting numerous global events throughout the year, including the All-Star Games in August and the Global Championship in November where the #1 team of the season will be crowned."]
         ,["Hearthstone ","HEARTHSTONE ESPORTS’ NEXT BIG TURN","2018 was a great year for Hearthstone Esports. Earlier this month Team China upset tournament favorite Brazil in the Grand Finals of the Hearthstone Global Games at BlizzCon. We’ve crowned two seasonal champions at our Summer and Fall Championships. We’ve seen more than 200,000 players attend 25 Tour Stops and other major events across the globe. And by the end of the Year of the Raven we’ll have awarded more than $2.8 million in prize money—our largest amount ever."]]
     
@@ -54,12 +54,12 @@ class SignedViewController: BaseViewController {
 //        self.navigationController?.pushViewController(mc!, animated: true)
 //
 //    }
-    @IBAction func profileaction(_ sender: Any) {
-        
-        var pvc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
-       pvc?.useremail = emailtxt.text!
-        self.navigationController?.pushViewController(pvc!, animated: true)
-    }
+//    @IBAction func profileaction(_ sender: Any) {
+//
+//        var pvc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
+//       pvc?.useremail = emailtxt.text!
+//        self.navigationController?.pushViewController(pvc!, animated: true)
+//    }
     
     /*
     // MARK: - Navigation
@@ -90,25 +90,10 @@ extension SignedViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
 //        let game = gameInfo[indexPath.row]
-        
+        cell.label.text = game[0]
         cell.img.image = UIImage(named: game[0])
         cell.label4.text = game[1]
         cell.label2.text = game[2]
-//        cell.img.image = readImg(vehicle.value(forKey: "photo") as? String ?? "")
-//        cell.label1.text = String((vehicle.value(forKey: "id") as? Int)!)
-//        cell.label2.text = vehicle.value(forKeyPath: "type") as? String
-//        cell.label3.text = "\(year)"
-//        cell.label4.text = vehicle.value(forKeyPath: "model") as? String
-        
-        
-        //        let dateformatter = DateFormatter()
-        //        dateformatter.dateFormat = "yyyy"
-        //        let year = dateformatter.string(from: vehicles[indexPath.row].year! as Date)
-        //
-        //
-        //        cell.label1.text = vehicles[indexPath.row].model
-        //        cell.label2.text = vehicles[indexPath.row].type
-        //        cell.label3.text = "\(year)"
         return cell
     }
     
@@ -152,8 +137,6 @@ extension SignedViewController: UITableViewDataSource, UITableViewDelegate {
             return filteredGameInfo.count
         }
         return gameInfo.count
-        
-//        return 3
         
     }
     
@@ -227,16 +210,8 @@ extension SignedViewController: UISearchResultsUpdating {
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-//        filteredVehicles = vehicles.filter({( v : NSManagedObject) -> Bool in
-//            //            return String((v.value(forKey: "id") as? Int)!).lowercased().contains(searchText.lowercased())
-//            return String((v.value(forKey: "type") as? String)!).lowercased().contains(searchText.lowercased())
-//
-//        })
-        
         filteredGameInfo = gameInfo.filter({( v : [String]) -> Bool in
-            //            return String((v.value(forKey: "id") as? Int)!).lowercased().contains(searchText.lowercased())
-            return v[1].lowercased().contains(searchText.lowercased())
-            
+            return v[0].lowercased().contains(searchText.lowercased())
         })
         
         tableView.reloadData()

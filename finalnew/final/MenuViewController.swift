@@ -22,6 +22,11 @@ class MenuViewController: UIViewController {
     var delegate: SlideMenuDelegate?
     let userDefaults = UserDefaults()
     
+    @IBAction func profile(_ sender: UIButton) {
+        var pvc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
+        pvc?.useremail = labelEmail.text!
+        self.navigationController?.pushViewController(pvc!, animated: true)
+    }
     @IBAction func signOut(_ sender: Any) {
         print("Sign out pressed")
         do{
