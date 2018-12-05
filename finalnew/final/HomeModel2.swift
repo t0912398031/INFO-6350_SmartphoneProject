@@ -106,6 +106,77 @@ class HomeModel2: NSObject, URLSessionDataDelegate{
             
         })
     }
+    
+    // description
+    //api 
+    func downloadItemsallDescription() {
+        print("444")
+        let urlPath : String = "http://localhost:8080/webios/getDescription.htm"
+        let url: URL = URL(string: urlPath)!
+        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
+        
+        let task = defaultSession.dataTask(with: url) { (data, response, error) in
+            
+            if error != nil {
+                print("Failed to download data")
+            }else {
+                print("Data downloaded")
+                
+                self.parseJSONarray(data!)
+            }
+            
+        }
+        
+        task.resume()
+    }
+    
+    
+    
+    func parseJSONarray(_ data:Data) {
+        print(data)
+        var jsonResult = NSArray()
+        
+        do{
+            jsonResult = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+            print(jsonResult)
+        } catch let error as NSError {
+            print(error)
+            
+        }
+        var jsonElement = NSDictionary()
+        let locations = NSMutableArray()
+        
+        for i in 0 ..< jsonResult.count
+        {
+            
+            jsonElement = jsonResult[i] as! NSDictionary
+            
+            let profile = ProfileModel()
+            
+            if let useremail = jsonElement.value(forKey: "useremail") as? String,
+                
+                let desc = jsonElement.value(forKey: "description")as? String
+                
+                
+                
+            {
+                profile.useremail = useremail
+                profile.desc = desc
+              
+                
+            }
+            
+            locations.add(profile)
+            
+        }
+        
+        DispatchQueue.main.async(execute: { () -> Void in
+            
+            self.delegate.itemDownloaded2(items: locations)
+            
+        })
+    }
+    //description
 }
 
 

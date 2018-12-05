@@ -11,4 +11,6 @@ pod 'Firebase/Core'
 pod 'GoogleSignIn'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'YNDropDownMenu'
+pod 'DropDown'
 end
