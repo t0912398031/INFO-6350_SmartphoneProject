@@ -24,6 +24,7 @@
 		1A99305721B1CC2A0093368C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A99305521B1CC2A0093368C /* LaunchScreen.storyboard */; };
 		1A99305F21B1CC360093368C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A99305E21B1CC360093368C /* GoogleService-Info.plist */; };
 		1A99306121B1D2A30093368C /* SignedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A99306021B1D2A30093368C /* SignedViewController.swift */; };
+		1A9BE3D321B8CF2C0044DA3E /* addGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BE3D221B8CF2C0044DA3E /* addGameViewController.swift */; };
 		20A5A639B3B750D92145B161 /* Pods_final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A405307ECF531BB020AE17CC /* Pods_final.framework */; };
 		6C3A5D4621B5F52C003EE5CD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A5D4521B5F52C003EE5CD /* BaseViewController.swift */; };
 		6C3A5D4821B5F560003EE5CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3A5D4721B5F55F003EE5CD /* MenuViewController.swift */; };
@@ -51,6 +52,7 @@
 		1A99305821B1CC2A0093368C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A99305E21B1CC360093368C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A99306021B1D2A30093368C /* SignedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedViewController.swift; sourceTree = "<group>"; };
+		1A9BE3D221B8CF2C0044DA3E /* addGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGameViewController.swift; sourceTree = "<group>"; };
 		481D8E6576E872CC766037E8 /* Pods-final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final.debug.xcconfig"; path = "Pods/Target Support Files/Pods-final/Pods-final.debug.xcconfig"; sourceTree = "<group>"; };
 		6C3A5D4521B5F52C003EE5CD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		6C3A5D4721B5F55F003EE5CD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				6C3D719A21B64B63008FA28A /* Location.gpx */,
 				1A2E9FA021B6FC6400E65E0D /* DescViewController.swift */,
 				1A2E9FA221B72D2800E65E0D /* Location.swift */,
+				1A9BE3D221B8CF2C0044DA3E /* addGameViewController.swift */,
 			);
 			path = final;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				1A0836F921B37B2700C03624 /* HomeModel.swift in Sources */,
 				1A42600721B4F73E00DC68EA /* MatchViewController.swift in Sources */,
 				1A0836F721B377D900C03624 /* ProfileModel.swift in Sources */,
+				1A9BE3D321B8CF2C0044DA3E /* addGameViewController.swift in Sources */,
 				6C3A5D4821B5F560003EE5CD /* MenuViewController.swift in Sources */,
 				1A42600321B4D46B00DC68EA /* GameModel.swift in Sources */,
 				1A2E9FA121B6FC6400E65E0D /* DescViewController.swift in Sources */,
